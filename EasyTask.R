@@ -1,5 +1,5 @@
 library(animint2)
-UPIData <- read.csv('./data/UPIDatat.csv')
+UPIData <- read.csv('./data/UPIData.csv')
 
 
 show.point.list <- list()
@@ -17,6 +17,7 @@ show.path <- do.call(rbind, show.path.list)
 
 viz.panels <- list(
   scatter=ggplot()+
+    ggtitle("Comparision of Unified Payments Interface(UPI) Usage Data")+
     geom_point(aes(x=No.Of.Banks.Using.Upi, y=Volume.Of.Transaction.in.Mn, color=Month),
                size=6,
                data=show.point)+
@@ -28,4 +29,6 @@ viz.panels <- list(
     theme(panel.margin=grid::unit(0, "lines"))+
     theme_animint(width=800, height=500)
 )
-structure(viz.panels, class="animint")
+data_viz <- structure(viz.panels)
+viz.animint <- animint(data_viz$scatter)
+viz.animint
