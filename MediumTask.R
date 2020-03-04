@@ -37,7 +37,7 @@ viz.plot <- ggplot(data.frame(x=c(0,1)), aes(x=x))+
              showSelected="iter",
              size=4,
              data=data)+
-  scale_shape_manual(values = c("TRUE" = 20, "FALSE" = 4))+
+  scale_shape_manual(values = c("TRUE" = 20, "FALSE" = 4))+ # Now working in Animint2 Viz
   scale_color_manual(values = c("TRUE" = "black", "FALSE"="red"))+
   theme_bw()+
   theme_animint(width=600, height=600)
@@ -47,4 +47,4 @@ viz.plot <- ggplot(data.frame(x=c(0,1)), aes(x=x))+
                         time=list(variable="iter", ms=300),
                         first=list(iter=1)))
 
-# animint2gist(viz.publish)
+animint2gist(viz.publish)
