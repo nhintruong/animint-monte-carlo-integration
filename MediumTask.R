@@ -7,7 +7,7 @@ HitOrMissMonteCarlo <- function() {
     
     from <- 0 
     to <- 1
-    max <- 500
+    max <- 200
     shape.option <- c(20, 4)
     
     x1 <- runif(max, from, to)
@@ -68,7 +68,7 @@ HitOrMissMonteCarlo <- function() {
               showSelected="iter",
               size=1,
               data=data)+
-    geom_text(aes(iter, pi, key=iter, label=paste("\u03C0", "=", pi, sep = " ")),
+    geom_text(aes(iter, pi, key=iter, label=paste("\u03C0", "=", sprintf("%.6f", pi), sep = " ")),
               showSelected=c("iter"),
               size=20,
               data=iteration)+
@@ -86,5 +86,6 @@ HitOrMissMonteCarlo <- function() {
 }
 
 viz <- HitOrMissMonteCarlo()
+
 animint2gist(viz)
 animint2dir(viz, "MediumOutput")
