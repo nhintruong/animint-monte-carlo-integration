@@ -7,4 +7,4 @@ Use `animint2` to visualize UPI(Unified Payments Interface) Data. [Source Code](
 Use `animint2` to implement `Hit or Miss Monte Carlo Integration` [Source Code](MediumTask.R) | [Result Viz](https://lazycipher.js.org/Tests-for-Animated-interactive-ggplots/MediumOutput/index.html)
 
 ## Hard Test
-Write a `testthat unit test` based on one of your Animint visualizations.(on the way)
+Write a `testthat unit test` based on one of your Animint visualizations. Created [PR #35](https://github.com/tdhock/animint2/pull/35)
