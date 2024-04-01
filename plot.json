@@ -605,5 +605,6 @@
 ] 
 } 
 },
-"title": "Hit or Miss Monte Carlo Integration" 
+"title": "Hit or Miss Monte Carlo Integration",
+"source": "https://github.com/nhintruong/animint-monte-carlo-integration/blob/master/MediumTask.R"
 }
